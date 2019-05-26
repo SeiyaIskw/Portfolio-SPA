@@ -11,7 +11,7 @@ import Work from "./contents/work/work"
 import Contact from "./contents/contact/contact"
 
 
-import theme from "./colorTheme/theme"
+import theme from "./util/theme"
 
 
 const App = () => {
