@@ -2,20 +2,18 @@ import React from 'react';
 //import './Track.css';
 
 class Article extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
 
     render() {
         return (
-            <div className="Track">
-              <div className="Track-information">
-                <h3>{this.props.track.name}</h3>
-                <p>{this.props.track.artist} | {this.props.track.album}</p>
-              </div>
-              {this.props.isRemoval ?  <button className="Track-action" onClick={this.removeTrack}>ー</button> : <button onClick={this.addTrack}>＋</button> }
-            </div>
+            <article className="Article">
+              <section className="Article-information">
+                <img src={this.props.img} alt="No Image" />
+                <h3>{this.props.title}</h3>
+              </section>
+              <section className="Article-Body">
+                <p>{this.props.text}</p>
+              </section>
+            </article>
         )
     }
 }

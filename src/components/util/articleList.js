@@ -1,13 +1,13 @@
 import React from 'react';
-import Article from "./article.js"
+import Article from "./article"
 
 class ArticleList extends React.Component {
     render() {
         return (
             <div className="ArticleList">
                 {
-                    this.props.tracks.map(Article => 
-                    <Aritcle key={Article.id} track={Article} onAdd={this.props.onAdd} onRemove={this.props.onRemove} isRemoval={this.props.isRemoval} />)
+                    this.props.articles.map((article, index) => 
+                    <Article key={article.index} title={article.title} img={article.image} text={article.text}/>)
                 }
             </div>
         )
