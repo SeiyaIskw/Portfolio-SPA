@@ -1,8 +1,15 @@
 import React from 'react';
 import ArticleList from "../../util/articleList"
-
+import workList from "./workList"
+import portfolio from "./img/portfolio.png"
 
 const articles = [{
+    title: "Portfolio of Mine",
+    img: portfolio,
+    text: <div>
+            <p>ここです</p>
+          </div>
+}, {
     title: "おなかすいた",
     img: "https://park.ajinomoto.co.jp/wp-content/uploads/2018/03/710704.jpeg",
     text: <div>

@@ -17,10 +17,10 @@ const styles = makeStyles(theme => ({
 class ArticleList extends React.Component {
     render() {
         return (
-            <Grid container spacing={2} justify="space-around" className="hoge">
+            <Grid container justify="space-around" className="hoge">
                     {
                         this.props.articles.map((article, index) => 
-                        <Grid item xs={5} className={styles.paper}>
+                        <Grid item xs={12} md={5} className={styles.paper}>
                             <Article key={index} title={article.title} img={article.img} text={article.text}/>
                         </Grid>)
                     }
