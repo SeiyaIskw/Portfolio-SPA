@@ -23,7 +23,7 @@ const Header = () => {
     return (
     <header className="header">
         <AppBar position="static" className={classes.root}>
-            <Link to="/"><Button className={classes.button} color="secondary">Home</Button></Link>
+            <Link to="/"><Button className={classes.button} color="primary">Home</Button></Link>
             <Link to="/about"><Button className={classes.button}>About</Button></Link>
             <Link to="/work"><Button className={classes.button}>Work</Button></Link>
             <Link to="/contact"><Button className={classes.button}>Contact</Button></Link>

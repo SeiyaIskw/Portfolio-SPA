@@ -3,25 +3,37 @@ import ArticleList from "../../util/articleList"
 
 
 const articles = [{
-    img: "hoge.jpg",
     title: "おなかすいた",
-    text: "そんな感じ"
+    img: "https://park.ajinomoto.co.jp/wp-content/uploads/2018/03/710704.jpeg",
+    text: <div>
+            <p>からあげ好き</p>
+          </div>
 }, {
-    img: "hoge.jpg",
-    title: "日本語",
-    text: "むずかしい"
+    title: "お茶漬け",
+    img: "https://park.ajinomoto.co.jp/wp-content/uploads/2018/03/main-47.jpg",
+    text: <div>
+            <p>むずかしい</p>
+          </div>
 }, {
+    title: "まんじゅう",
     img: "hoge.jpg",
-    title: "React",
-    text: "もうだめぽ"
+    text: <div>
+            こわい
+          </div>
 }, ]
 
 const Work = () => {
     return (
-        <div>
+        <div style={style}>
             <ArticleList articles={articles} />
         </div>
     )
+}
+
+const style = {
+    maxWidth: "80%",
+    margin: "0 auto",
+    marginTop: "2em"
 }
 
 export default Work

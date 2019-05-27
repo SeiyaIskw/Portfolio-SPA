@@ -15,7 +15,7 @@ const theme = createMuiTheme({
             "Roboto"
         ],
         fontSize: 14,
-    }
+    },
 })
 
 
