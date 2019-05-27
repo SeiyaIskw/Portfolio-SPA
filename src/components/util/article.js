@@ -32,6 +32,7 @@ class Article extends React.Component {
                   {this.props.img === "nope" ? "" : <CardMedia style={styles.cardMedia} image={this.props.img} title={this.props.title}/>}
                 <section style={styles.articleBody} className="Article-Body">
                   <Typography variant="h4">{this.props.title}</Typography>
+                  <Typography variant="h6" color="textSecondary">{this.props.subtitle}</Typography>
                   <Typography>{this.props.text}</Typography>
                 </section>
         </CardContent>

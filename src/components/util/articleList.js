@@ -21,7 +21,7 @@ class ArticleList extends React.Component {
                     {
                         this.props.articles.map((article, index) => 
                         <Grid item xs={12} md={5} className={styles.paper}>
-                            <Article key={index} title={article.title} img={article.img} text={article.text}/>
+                            <Article key={index} title={article.title} img={article.img} text={article.text} subtitle={article.subtitle}/>
                         </Grid>)
                     }
                     
