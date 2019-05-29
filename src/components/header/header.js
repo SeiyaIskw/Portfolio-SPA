@@ -2,28 +2,31 @@ import React from "react"
 import { NavLink } from 'react-router-dom'
 import AppBar from '@material-ui/core/AppBar';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button'
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
 
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    backgroundColor: "transparent",
-    display: "inline-block",
-    textAlign: "center",
-  },
+  root: {},
   link: {
     textDecoration: 'none',
   },
   button: {
-    margin: theme.spacing(1, 5),
+
   },
 }));
 
 
+
+
 const Header = () => {
-  const classes = useStyles()
-  //  color="primary"
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  function handleChange(event, newValue) {
+    setValue(newValue);
+  }
 
   const makeLink = (to) => React.forwardRef((props, ref) => <NavLink innerRef={ref} to={to} {...props} />)
 
@@ -34,12 +37,14 @@ const Header = () => {
 
   return (
     <header className="header">
-        <AppBar position="static" className={classes.root}>
-          <Button className={classes.button} component={homeLink}>Home</Button>
-          <Button className={classes.button} component={aboutLink}>About</Button>
-          <Button className={classes.button} component={workLink}>Work</Button>
-          <Button className={classes.button} component={contactLink}>Contact</Button>
-        </AppBar>
+      <AppBar position="static" color="default">
+        <Tabs value={value} onChange={handleChange} indicatorColor="primary" textColor="primary" centered className={classes.root}>
+          <Tab className={classes.button} component={homeLink} label="Home" ></Tab>
+          <Tab className={classes.button} component={aboutLink} label="About" ></Tab>
+          <Tab className={classes.button} component={workLink} label="Work" ></Tab>
+          <Tab className={classes.button} component={contactLink} label="Contact" ></Tab>
+        </Tabs>
+      </AppBar>
     </header>
   )
 }

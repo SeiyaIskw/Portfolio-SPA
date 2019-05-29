@@ -10,17 +10,17 @@ const articles = [{
     title: "My Portfolio",
     subtitle: "React, React-Router, Material-UI",
     img: portfolio,
-    text: <p>ここです></p>
+    text: <p>ここです</p>
 }, {
     title: "おなかすいた",
     subtitle: "とりにく",
     img: "https://park.ajinomoto.co.jp/wp-content/uploads/2018/03/710704.jpeg",
-    text: <p>からあげ好き></p>
+    text: <p>からあげ好き</p>
 }, {
     title: "お茶漬け",
     subtitle: "おこめ、おちゃ",
     img: "https://park.ajinomoto.co.jp/wp-content/uploads/2018/03/main-47.jpg",
-    text: <p>むずかしい></p>
+    text: <p>むずかしい</p>
 }, {
     title: "まんじゅう",
     subtitle: "",
