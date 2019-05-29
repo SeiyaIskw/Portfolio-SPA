@@ -1,3 +1,8 @@
+このGithubに載せてあるのは制作中のポートフォリオの基礎部分です、ちょっとふざけています
+[ここ](http://portfolio-yuto.surge.sh/)で見られます
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

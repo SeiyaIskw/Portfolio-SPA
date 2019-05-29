@@ -5,40 +5,39 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia';
 
 
-const styles = {
-  card: {
-    margin: "1em 0",
-  },
-  cardContent: {
-    padding: 0,
-  },
-  cardMedia: {
-    height: 0,
-    paddingTop: "50%",
-    margin: 0,
-  },
-  articleBody: {
-    padding: 16,
+const Article = props => {
+
+  const styles = {
+    card: {
+      margin: "1em 0",
+    },
+    cardContent: {
+      padding: 0,
+    },
+    cardMedia: {
+      height: 0,
+      paddingTop: "50%",
+      margin: 0,
+      backgroundSize: props.from === "about" ? "contain" : "cover",
+    },
+    articleBody: {
+      padding: 16,
+    }
   }
-}
-
-class Article extends React.Component {
 
 
-  render() {
-    return (
-      <Card style={styles.card}>
+  return (
+    <Card style={styles.card && props.title ? {} : {visibility :"hidden"}}>
         <CardContent style={styles.cardContent} className="Article">
-                  {this.props.img === "nope" ? "" : <CardMedia style={styles.cardMedia} image={this.props.img} title={this.props.title}/>}
+                  {props.img === "nope" ? "" : <CardMedia style={styles.cardMedia} image={props.img} title={props.title} />}
                 <section style={styles.articleBody} className="Article-Body">
-                  <Typography variant="h4">{this.props.title}</Typography>
-                  <Typography variant="h6" color="textSecondary">{this.props.subtitle}</Typography>
-                  <Typography>{this.props.text}</Typography>
+                  <Typography variant="h4">{props.title}</Typography>
+                  <Typography variant="subtitle1" color="textSecondary">{props.subtitle}</Typography>
+                  <Typography variant="body1" component="div">{props.text}</Typography>
                 </section>
         </CardContent>
-      </Card>
-    )
-  }
+    </Card>
+  )
 }
 
 export default Article

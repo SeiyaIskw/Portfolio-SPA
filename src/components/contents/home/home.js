@@ -6,11 +6,9 @@ import "./home.css"
 const Home = () => {
     return (
         <div className="home" >
-            <video id="bg-video" ref={ i => { if (i) {i.playbackRate = 0.2}}}  autoPlay loop muted>
-                <source src={video} type="video/mp4" />
-            </video>
+            <video id="bg-video" src={video} type="video/mp4"  autoPlay loop muted></video>
             <div className="title">
-                <h1>Taro Yamada's Portfolio</h1>
+                <h1>Portfolio</h1>
                 <h3>KARAAGE TABETAI</h3>
             </div>
         </div>

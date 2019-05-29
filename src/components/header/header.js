@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import AppBar from '@material-ui/core/AppBar';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button'
@@ -12,6 +12,9 @@ const useStyles = makeStyles(theme => ({
     display: "inline-block",
     textAlign: "center",
   },
+  link: {
+    textDecoration: 'none',
+  },
   button: {
     margin: theme.spacing(1, 5),
   },
@@ -21,13 +24,21 @@ const useStyles = makeStyles(theme => ({
 const Header = () => {
   const classes = useStyles()
   //  color="primary"
+
+  const makeLink = (to) => React.forwardRef((props, ref) => <NavLink innerRef={ref} to={to} {...props} />)
+
+  const homeLink = makeLink("/")
+  const aboutLink = makeLink("/about")
+  const workLink = makeLink("/work")
+  const contactLink = makeLink("/contact")
+
   return (
     <header className="header">
         <AppBar position="static" className={classes.root}>
-            <Link to="/"><Button className={classes.button}>Home</Button></Link>
-            <Link to="/about"><Button className={classes.button}>About</Button></Link>
-            <Link to="/work"><Button className={classes.button}>Work</Button></Link>
-            <Link to="/contact"><Button className={classes.button}>Contact</Button></Link>
+          <Button className={classes.button} component={homeLink}>Home</Button>
+          <Button className={classes.button} component={aboutLink}>About</Button>
+          <Button className={classes.button} component={workLink}>Work</Button>
+          <Button className={classes.button} component={contactLink}>Contact</Button>
         </AppBar>
     </header>
   )
