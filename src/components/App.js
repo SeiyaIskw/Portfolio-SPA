@@ -9,6 +9,7 @@ import Home from "./contents/home/home"
 import About from "./contents/about/about"
 import Work from "./contents/work/work"
 import Contact from "./contents/contact/contact"
+import Editor from "./util/editor"
 
 
 import theme from "./util/theme"
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/about" component={About} />
             <Route path="/work" component={Work} />
             <Route path="/contact" component={Contact} />
+            <Route path="/editor" component={Editor} />
         </div>
       </BrowserRouter>
     </ThemeProvider >

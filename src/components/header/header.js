@@ -34,6 +34,7 @@ const Header = () => {
   const aboutLink = makeLink("/about")
   const workLink = makeLink("/work")
   const contactLink = makeLink("/contact")
+  const editorLink = makeLink("/editor")
 
   return (
     <header className="header">
@@ -43,6 +44,7 @@ const Header = () => {
           <Tab className={classes.button} component={aboutLink} label="About" ></Tab>
           <Tab className={classes.button} component={workLink} label="Work" ></Tab>
           <Tab className={classes.button} component={contactLink} label="Contact" ></Tab>
+          <Tab className={classes.button} component={editorLink} label="Editor" ></Tab>
         </Tabs>
       </AppBar>
     </header>
