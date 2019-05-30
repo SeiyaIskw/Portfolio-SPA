@@ -27,7 +27,7 @@ const Article = props => {
 
 
   return (
-    <Card style={styles.card && props.title ? {} : {visibility :"hidden"}}>
+    <Card style={styles.card + props.title ? {} : {visibility :"hidden"}}>
         <CardContent style={styles.cardContent} className="Article">
                   {props.img === "nope" ? "" : <CardMedia style={styles.cardMedia} image={props.img} title={props.title} />}
                 <section style={styles.articleBody} className="Article-Body">

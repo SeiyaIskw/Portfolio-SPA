@@ -8,12 +8,8 @@ import Tab from '@material-ui/core/Tab';
 
 
 const useStyles = makeStyles(theme => ({
-  root: {},
   link: {
     textDecoration: 'none',
-  },
-  button: {
-
   },
 }));
 
