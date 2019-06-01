@@ -28,7 +28,7 @@ const articles = [{
     text: <p>もうだめぽ</p>
 }, {
     title: "Vue",
-    subtitle: "",
+    subtitle: "3秒",
     img: "hoge.jpg",
     text: <p>3秒しか触ってない</p>
 }, ]

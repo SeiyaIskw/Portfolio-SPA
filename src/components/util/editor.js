@@ -15,7 +15,7 @@ class Editor extends React.Component {
       title: "My Portfolio",
       subtitle: "React, React-Router, Material-UI",
       img: portfolio,
-      text: <p>ここです</p>
+      text: <p>ここです</p>,
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -46,14 +46,14 @@ class Editor extends React.Component {
                 <TextField label="Title" className={this.props.classes.upperTextField} value={this.state.title} onChange={this.handleChange("title")} />
                 <TextField label="Subtitle" className={this.props.classes.upperTextField} value={this.state.subtitle} onChange={this.handleChange("subtitle")}/><br/>
                 <TextField label="imgSource" className={this.props.classes.lowerTextField} value={this.state.img} onChange={this.handleChange("img")}/><br/>
-                <TextField label="text" className={this.props.classes.lowerTextField}  value={this.state.text} onChange={this.handleChange("text")} multiline rows="10"/>
+                <TextField label="text(buggy)" className={this.props.classes.lowerTextField}  value={this.state.text} onChange={this.handleChange("text")} multiline rows="10"/>
               </CardContent>
             </Card>
             <Card className={this.props.classes.card} style={{margin: "1em", padding: "1em"}}>
                 <p>{'{'}  title: "{this.state.title}"</p>
                 <p>  subtitle: "{this.state.subtitle}"</p>
                 <p>  img: "{this.state.img}"</p>
-                <p>  text: {"<p>"}{this.state.text}{"</p>"}</p>
+                <p>  text: {"<Typography>"}{this.state.text}{"</Typography>"}</p>
                 <p>{'}'}</p>
             </Card>
           </Grid>

@@ -3,11 +3,11 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia';
-
+import { makeStyles } from '@material-ui/core/styles';
 
 const Article = props => {
 
-  const styles = {
+  const useStyles = makeStyles({
     card: {
       margin: "1em 0",
     },
@@ -18,22 +18,22 @@ const Article = props => {
       height: 0,
       paddingTop: "50%",
       margin: 0,
-      backgroundSize: props.from === "about" ? "contain" : "cover",
     },
     articleBody: {
       padding: 16,
     }
-  }
+  })
 
+  const classes = useStyles()
 
   return (
-    <Card style={styles.card + props.title ? {} : {visibility :"hidden"}}>
-        <CardContent style={styles.cardContent} className="Article">
-                  {props.img === "nope" ? "" : <CardMedia style={styles.cardMedia} image={props.img} title={props.title} />}
-                <section style={styles.articleBody} className="Article-Body">
+    <Card className={classes.card} style={props.title ? {} : {visibility :"hidden"}}>
+        <CardContent className={classes.cardContent}>
+                  {props.img === "nope" ? "" : <CardMedia className={classes.cardMedia} style={{backgroundSize: props.from === "about" ? "contain" : "cover"}} image={props.img} title={props.title} />}
+                <section className={classes.articleBody}>
                   <Typography variant="h4">{props.title}</Typography>
                   <Typography variant="subtitle1" color="textSecondary">{props.subtitle}</Typography>
-                  <Typography variant="body1" component="div">{props.text}</Typography>
+                  <Typography variant="body1" component="div" style={{whiteSpace: 'pre-line'}}>{props.text}</Typography>
                 </section>
         </CardContent>
     </Card>
