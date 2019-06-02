@@ -16,7 +16,7 @@ class Editor extends React.Component {
       title: "My Portfolio",
       subtitle: "React, React-Router, Material-UI",
       img: portfolio,
-      text: <p>ここです</p>,
+      text: "ここです"
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -59,11 +59,11 @@ class Editor extends React.Component {
               </CardContent>
             </Card>
             <Card className={this.props.classes.card} style={{margin: "1em", padding: "1em"}}>
-                <p>{'{'}  title: "{this.state.title}"</p>
-                <p>   subtitle: "{this.state.subtitle}"</p>
-                <p>   img: "{this.state.img}"</p>
-                <p style={{whiteSpace: 'pre-line'}}>    text: {"<Typography　>"}{this.state.text}{"</Typography>"}</p>
-                <p>{'}'}</p>
+                <p style={{whiteSpace: 'pre-line'}}>{'{'}  title: "{this.state.title}"<br/>
+                   subtitle: "{this.state.subtitle}"<br/>
+                   img: "{this.state.img}"<br/>
+                    text: {"<section>"}{this.state.text}{"</section>"}<br/>
+                {'}'}</p>
             </Card>
           </Grid>
         </Grid>
