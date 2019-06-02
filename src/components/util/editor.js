@@ -53,7 +53,7 @@ class Editor extends React.Component {
                 <p>{'{'}  title: "{this.state.title}"</p>
                 <p>  subtitle: "{this.state.subtitle}"</p>
                 <p>  img: "{this.state.img}"</p>
-                <p>  text: {"<Typography>"}{this.state.text}{"</Typography>"}</p>
+                <p style={{whiteSpace: 'pre-line'}}>  text: {"<Typography>"}{this.state.text}{"</Typography>"}</p>
                 <p>{'}'}</p>
             </Card>
           </Grid>
