@@ -7,6 +7,7 @@ import portfolio from "../contents/work/img/portfolio.png"
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button'
 
 class Editor extends React.Component {
   constructor(props) {
@@ -19,11 +20,18 @@ class Editor extends React.Component {
     }
 
     this.handleChange = this.handleChange.bind(this)
+    this.incertNewLine = this.incertNewLine.bind(this)
   }
 
   handleChange = name => event => {
     this.setState(({
       [name]: event.target.value
+    }))
+  }
+
+  incertNewLine = () => {
+    this.setState(({
+      "text": this.state.text.split("\n").join("<br/>\n")
     }))
   }
 
@@ -47,13 +55,14 @@ class Editor extends React.Component {
                 <TextField label="Subtitle" className={this.props.classes.upperTextField} value={this.state.subtitle} onChange={this.handleChange("subtitle")}/><br/>
                 <TextField label="imgSource" className={this.props.classes.lowerTextField} value={this.state.img} onChange={this.handleChange("img")}/><br/>
                 <TextField label="text(buggy)" className={this.props.classes.lowerTextField}  value={this.state.text} onChange={this.handleChange("text")} multiline rows="10"/>
+                  <Button color="secondary" variant="outlined"  onClick={this.incertNewLine} style={{textTransform: "none"}}>New Line to {"<br/>"}</Button>
               </CardContent>
             </Card>
             <Card className={this.props.classes.card} style={{margin: "1em", padding: "1em"}}>
                 <p>{'{'}  title: "{this.state.title}"</p>
                 <p>   subtitle: "{this.state.subtitle}"</p>
                 <p>   img: "{this.state.img}"</p>
-                <p style={{whiteSpace: 'pre-line'}}>    text: {"<Typography>"}{this.state.text}{"</Typography>"}</p>
+                <p style={{whiteSpace: 'pre-line'}}>    text: {"<Typography　>"}{this.state.text}{"</Typography>"}</p>
                 <p>{'}'}</p>
             </Card>
           </Grid>

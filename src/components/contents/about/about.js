@@ -15,7 +15,8 @@ const articles = [{
     title: "英語",
     subtitle: "20年以上",
     img: "image.jpg",
-    text: <p>そこそこ</p>
+    text: <p style={{whiteSpace:"pre-line"}}>そこそこ
+    行ける気がする</p>
 }, {
     title: "日本語",
     subtitle: "生まれてから",

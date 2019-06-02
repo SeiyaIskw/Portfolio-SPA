@@ -21,6 +21,9 @@ const Article = props => {
     },
     articleBody: {
       padding: 16,
+    },
+    text: {
+      whiteSpace: "pre-line"
     }
   })
 
@@ -33,7 +36,7 @@ const Article = props => {
                 <section className={classes.articleBody}>
                   <Typography variant="h4">{props.title}</Typography>
                   <Typography variant="subtitle1" color="textSecondary">{props.subtitle}</Typography>
-                  <Typography variant="body1" component="div" style={{whiteSpace: 'pre-line'}}>{props.text}</Typography>
+                  <Typography variant="body1" component = "div" className={classes.text}>{props.text}</Typography>
                 </section>
         </CardContent>
     </Card>
