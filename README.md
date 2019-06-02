@@ -1,5 +1,4 @@
-このGithubに載せてあるのは制作中のポートフォリオの基礎部分です、ちょっとふざけています
-[ここ](http://portfolio-yuto.surge.sh/)で見られます
+ここはEditorブランチです、Masterのreadme.mdでここのビルド版が見られます
 
 ---
 
