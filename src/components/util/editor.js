@@ -59,11 +59,11 @@ class Editor extends React.Component {
               </CardContent>
             </Card>
             <Card className={this.props.classes.card} style={{margin: "1em", padding: "1em"}}>
-                <p style={{whiteSpace: 'pre-line'}}>{'{'}  title: "{this.state.title}"<br/>
-                   subtitle: "{this.state.subtitle}"<br/>
-                   img: "{this.state.img}"<br/>
-                    text: {"<Typography>"}{this.state.text}{"</Typography>"}<br/>
-                {'}'}</p>
+                <p style={{whiteSpace: 'pre-line'}}>{'{'}  title: "{this.state.title}",<br/>
+                   subtitle: "{this.state.subtitle}",<br/>
+                   img: "{this.state.img}",<br/>
+                    text: {"<Typography>"}{this.state.text}{"</Typography>"},<br/>
+                {'},'}</p>
             </Card>
           </Grid>
         </Grid>
